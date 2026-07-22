@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Sala</title>
+<!-- Importación de la fuente Outfit desde Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+
+</style>
+</head>
+<body>
+
+  <div class="curtain left"></div>
+  <div class="curtain right"></div>
+
+  <div class="marquee-wrap">
+    <button id="btn-menu" class="menu-btn" type="button" aria-expanded="false" aria-controls="sidebar-menu" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="eyebrow">Entretenimiento · Datech</div>
+    <h1>Toviu HUB</h1>
+    <div class="bulbs">
+      <span class="bulb"></span><span class="bulb"></span><span class="bulb"></span>
+      <span class="bulb"></span><span class="bulb"></span><span class="bulb"></span>
+      <span class="bulb"></span>
+    </div>
+  </div>
+
+  <div id="sidebar-overlay" class="sidebar-overlay hidden" data-close-sidebar="true"></div>
+  <aside id="sidebar-menu" class="sidebar hidden" aria-hidden="true">
+    <div class="sidebar-header">
+      <h2>Menu</h2>
+      <button id="btn-close-menu" class="icon-btn" type="button" aria-label="Cerrar menu">X</button>
+    </div>
+    <div class="sidebar-actions">
+      <button id="btn-add" class="btn-primary" type="button">+ Nuevo Link</button>
+      <button id="btn-reset" class="btn-ghost" type="button">Restablecer</button>
+    </div>
+  </aside>
+
+  <div class="toolbar-spacer" aria-hidden="true">
+    
+  </div>
+
+  <div id="links-grid" class="grid"></div>
+
+  <div id="modal" class="modal hidden" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal="true"></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <h2 id="modal-title">Agregar Nuevo Link</h2>
+      <form id="link-form" novalidate>
+        <label for="link-name">Nombre</label>
+        <input id="link-name" name="name" type="text" maxlength="40" placeholder="Ej: Netflix" required>
+
+        <label for="link-url">URL</label>
+        <input id="link-url" name="url" type="url" maxlength="200" placeholder="https://ejemplo.com" required>
+
+        <label for="link-tag">Etiqueta</label>
+        <input id="link-tag" name="tag" type="text" maxlength="25" placeholder="Streaming">
+
+        <div class="form-error" id="form-error" aria-live="polite"></div>
+
+        <div class="modal-actions">
+          <button type="button" id="btn-cancel" class="btn-ghost">Cancelar</button>
+          <button type="submit" class="btn-primary">Guardar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer">Alt + Home vuelve aquí</div>
+
+  <script src="Js/motor.js"></script>
+</body>
+</html>

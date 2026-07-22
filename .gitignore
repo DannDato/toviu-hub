@@ -1,0 +1,41 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Dependencies
+node_modules/
+
+# Build / distribution
+build/
+dist/
+out/
+coverage/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# IDE / Editors
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+.idea/
+*.swp
+*.swo
+
+# Python (if local static server tooling or scripts are used)
+__pycache__/
+*.pyc
+
+# Temporary files
+*.tmp
+*.temp
